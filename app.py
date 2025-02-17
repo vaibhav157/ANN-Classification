@@ -1,5 +1,14 @@
 import streamlit as st
 import numpy as np
+
+import subprocess
+import sys
+
+package="tensorflow"
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 import pandas as pd
